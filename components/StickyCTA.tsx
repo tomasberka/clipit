@@ -1,10 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { ShoppingCart } from 'lucide-react';
+import { useCart } from '@/context/CartContext';
 
 const SCROLL_THRESHOLD = 500;
 
 export default function StickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
+  const { selectedBundle } = useCart();
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -32,9 +35,16 @@ export default function StickyCTA() {
       <div className="max-w-md mx-auto">
         <button
           onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-          className="w-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-black text-lg py-4 rounded-2xl shadow-[0_10px_40px_-10px_rgba(16,185,129,1)] active:scale-95 transition-all uppercase tracking-widest flex items-center justify-center gap-2"
+          className="w-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-black text-lg py-4 rounded-2xl shadow-[0_10px_40px_-10px_rgba(16,185,129,1)] active:scale-95 transition-all flex items-center justify-center gap-3"
         >
-          Koupit nyní
+          <ShoppingCart className="w-5 h-5 shrink-0" />
+          <span>
+            Koupit nyní
+            <span className="mx-2 opacity-60 text-sm font-bold normal-case tracking-normal">
+              {selectedBundle.quantity} ks ·
+            </span>
+            {selectedBundle.price} Kč
+          </span>
         </button>
       </div>
     </div>

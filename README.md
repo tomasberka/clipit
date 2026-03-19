@@ -24,7 +24,7 @@ Tento repozitář obsahuje zdrojové kódy pro vysoce konverzní e-commerce "One
 
 | Technologie | Popis |
 |---|---|
-| [Next.js 14+](https://nextjs.org/) | Framework (App Router) |
+| [Next.js 16+](https://nextjs.org/) | Framework (App Router) |
 | [TypeScript](https://www.typescriptlang.org/) | Statické typování |
 | [Tailwind CSS](https://tailwindcss.com/) | Styling (Dark/Neon motiv) |
 | [Lucide React](https://lucide.dev/) | Lehké a škálovatelné ikony |
