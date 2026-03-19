@@ -1,6 +1,6 @@
 'use client';
 import { Check, Truck, ShoppingCart } from 'lucide-react';
-import { useCart, BUNDLES } from '@/context/CartContext';
+import { useCart } from '@/context/CartContext';
 import FadeIn from './FadeIn';
 
 export default function BundlePricing() {
